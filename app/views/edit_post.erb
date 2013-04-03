@@ -1,0 +1,24 @@
+<h2>Edit or delete your post:</h2>
+<form action="/post/<%=@post.id%>/edit/<%=@post.access_key%>" method="post">
+
+  <select name='category_id' selected="<%= @post.category_id %>">
+    <option value="1">Boats</option>
+    <option value="2">Cars</option>
+    <option value="3">Personals</option>
+    <option value="4">TVs</option>
+  </select>
+
+  <br><br>
+  <input type='text' name='title' value="<%= @post.title %>" placeholder ='Title' autofocus='autofocus'/><br><br>
+  <input type='text' name='price' value="<%= @post.price %>"placeholder ='Price' />
+  <br><br>
+  <textarea name= 'description' placeholder='Type your description here'><%= @post.description %></textarea>   
+  <br><br>
+  <input type = 'submit' name ='submit' value = 'Update!'>
+  <input type = 'submit' name ='submit' value = 'Delete!'>
+</form>
+
+
+
+
+
